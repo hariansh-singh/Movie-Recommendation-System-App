@@ -1,6 +1,5 @@
 import os
 from flask import Flask, render_template, request
-# import joblib
 import gzip  
 import pickle
 import requests
@@ -9,11 +8,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__, template_folder=os.path.abspath('templates'), static_url_path='/images', static_folder='images')
-
-
-# movies = pickle.load('movie_list.pkl')
-# movies = pickle.load(open('movie_list.pkl', 'rb'))
-# similarity = pickle.load(open('similarity.pkl', 'rb'))  
 
 with gzip.open('movie_list.pkl.gz', 'rb') as f:
     movies = pickle.load(f)
