@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Movies</title>
+    <style>
+        body {
+            background-image: url(/images/Back_pic.jpg);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .background::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(/images/Back_pic.jpg);
+            background-size: cover;
+            filter: blur(3px);
+        }
+
+        .header {
+            background-color: #000000;
+            position: fixed;
+            height: 60px;
+            width: 100vw;
+            opacity: 0.85;
+            top: 0px;
+        }
+
+        .poster-frame {
+            max-width: 100%;
+            max-height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .poster-frame:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-left: 65vh;
+            margin-top: 0vh;
+            color: #ecf0f1;
+            top: 0px;
+            left: 200px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .title-icon {
+            margin-left: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content: space-around;
+            overflow-x: auto;
+
+        }
+
+        li {
+            margin-top: 300px;
+            margin-bottom: 40px;
+            box-sizing: border-box;
+            text-align: center;
+            height: 300px;
+            width: 210px;
+            position: inherit;
+            margin-right: 10px;
+            background-color: #000000cf;
+            opacity: 0.99;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 px rgba(255, 0, 0, 0.8);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        li:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        h3 {
+            color: #ecf0f1;
+            margin-bottom: 10px;
+        }
+
+        .poster-frame {
+            max-height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 5px;
+            opacity: 1;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        p {
+            color: #bdc3c7;
+            margin-bottom: 10px;
+        }
+
+        .home-button {
+            height: 25px;
+            background-color: #c52424;
+            position: fixed;
+            top: 8px;
+            right: 10px;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 50%;
+
+        }
+
+        .home-button:hover {
+            background-color: #ffffff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="background">
+
+        <div class="header">
+            <h1>Recommended Movies <i class="fas fa-film title-icon"></i></h1>
+        </div>
+        <a class="home-button" href="/"><img src="/images/home.png" alt=""></a>
+        <ul>
+            {% for movie in recommendations %}
+            <div class="li">
+                <li>
+                    <div class="poster-frame">
+                        {% if movie['poster_path'] %}
+                        <img class="pics" src="{{ movie['poster_path'] }}" alt="{{ movie['title'] }} Poster">
+                        {% else %}
+                        <p>No poster available for this movie</p>
+                        {% endif %}
+                    </div>
+                    <h3>{{ movie['title'] }}</h3>
+                </li>
+            </div>
+            {% endfor %}
+        </ul>
+    </div>
+    </div>
+</body>
+
+</html>
