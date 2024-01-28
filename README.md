@@ -37,6 +37,6 @@ Contributions are welcome! If you would like to contribute to the Movie Recommen
 4. Push to the branch: `git push origin feature/your-feature-name`
 5. Submit a pull request
 
-## acknowledgement
+## Acknowledgement
 
 The Movie Database (TMDb) for providing the movie dataset and API.
