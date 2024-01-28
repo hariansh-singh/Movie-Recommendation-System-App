@@ -8,11 +8,11 @@ This is a Movie Recommendation System that suggests movies to users based on the
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Description
 
-This Movie Recommendation App is a web application developed using Flask, HTML, and CSS. The recommendation engine utilizes Natural Language Processing (NLP) techniques, NLTK for tokenization and stemming, as well as Pandas and NumPy for data manipulation. The dataset used for training and recommendation comprises information on 5000 movies obtained from the TMDb (The Movie Database) API.
+This Movie Recommendation App is a web application developed using Flask, HTML, and CSS. The recommendation engine utilizes Natural Language Processing (NLP) techniques, NLTK for tokenization and stemming, as well as Pandas and NumPy for data manipulation. The dataset used for training and recommendation comprises information on 4806 movies obtained from the TMDb (The Movie Database) API.
 
 
 ## Installation
@@ -25,7 +25,7 @@ To run the Movie Recommendation System, follow these steps:
 
 ## Usage
 
-Once the application is running, you can access the Movie Recommendation System through your web browser. Simply navigate to `http://localhost:5000` and you will be able to search for movies, rate them, and receive personalized recommendations.
+Once the application is running, you can access the Movie Recommendation System through your web browser. Simply navigate to `http://localhost:5000` and you will be able to search for movies and receive personalized recommendations.
 
 ## Contributing
 
