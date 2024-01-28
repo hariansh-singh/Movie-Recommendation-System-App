@@ -66,9 +66,7 @@ def index():
     filtered_movies = [title for title in movies['title'] if user_input.lower() in title.lower()]
 
     suggestions = filtered_movies[:7]
-    
 
-    
     return render_template('index.html', movies=movies, suggestions=suggestions)
 
 @app.route('/recommend', methods=['POST'])
