@@ -67,6 +67,8 @@ def index():
 
     suggestions = filtered_movies[:7]
     
+
+    
     return render_template('index.html', movies=movies, suggestions=suggestions)
 
 @app.route('/recommend', methods=['POST'])
