@@ -8,7 +8,7 @@ This is a Movie Recommendation System that suggests movies to users based on the
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Acknowledgments](#acknowledgments)
+- [Acknowledgement](#acknowledgement)
 
 ## Description
 
@@ -37,6 +37,6 @@ Contributions are welcome! If you would like to contribute to the Movie Recommen
 4. Push to the branch: `git push origin feature/your-feature-name`
 5. Submit a pull request
 
-## Acknowledgments
+## acknowledgement
 
 The Movie Database (TMDb) for providing the movie dataset and API.
