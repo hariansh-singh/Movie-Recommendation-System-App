@@ -1,6 +1,6 @@
 # Movie Recommendation System
 
-This is a Movie Recommendation System that suggests movies to users based on their preferences.
+This is a Movie Recommendation System that suggests movies to users, based on their preferences.
 
 ## Table of Contents
 
